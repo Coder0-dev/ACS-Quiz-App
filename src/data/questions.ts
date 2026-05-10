@@ -1,77 +1,74 @@
 import { Question } from '../types';
 
 export const rawQuestions: Question[] = [
-  // --- FROM CHEM 131 FINAL REVIEW ---
   {
-    id: "1",
-    question: "How many sulfur atoms are in 3.00 g of iron pyrite, $FeS_2$ ($M = 120.0\\text{ g/mol}$)?",
-    options: ["$7.53 \\times 10^{21}$", "$1.51 \\times 10^{22}$", "$3.01 \\times 10^{22}$", "$6.02 \\times 10^{23}$"],
-    correctAnswer: "$3.01 \\times 10^{22}$",
-    explanation: "3.00g / 120.0g/mol = 0.025 mol $FeS_2$. Each mole has 2 moles of S atoms. $0.025 \\times 2 \\times 6.022 \\times 10^{23} = 3.01 \\times 10^{22}$." [cite: 57, 58, 59]
+    id: "acs-001",
+    question: `How many sulfur atoms are in 3.00 g of iron pyrite, $FeS_{2}$ ($M=120.0~g/mol$)?`,
+    options: [`$7.53\\times10^{21}$`, `$1.51\\times10^{22}$`, `$3.01\\times10^{22}$`, `$6.02\\times10^{23}$`],
+    correctAnswer: `$3.01\\times10^{22}$`,
+    explanation: `First find moles of $FeS_{2}$: $3.00g / 120.0g/mol = 0.025 mol$. Since each formula unit has 2 S atoms, there are 0.050 moles of S. $0.050 \\times 6.022\\times10^{23} = 3.01\\times10^{22}$ atoms.`
   },
   {
-    id: "2",
-    question: "1.000 g of a transition metal carbonate, $MCO_3$, is heated to produce the metal oxide and 0.383 g of $CO_2$. What is the identity of metal M?",
-    options: ["Mn", "Ni", "Cu", "Zn"],
-    correctAnswer: "Mn",
-    explanation: "$0.383\\text{g } CO_2 / 44.01\\text{g/mol} = 0.00870\\text{ mol}$. Molar mass of $MCO_3 = 1.000\\text{g} / 0.00870\\text{mol} = 114.9\\text{g/mol}$. $M = 114.9 - 60 (CO_3) = 54.9$ (Manganese)." [cite: 70, 71, 72]
+    id: "acs-002",
+    question: `What species is represented by $p^{+}=12, n^{\\circ}=14, e^{-}=10$?`,
+    options: [`Ne`, `Si`, `Mg`, `$Mg^{2+}$`],
+    correctAnswer: `$Mg^{2+}$`,
+    explanation: `An atomic number of 12 identifies the element as Magnesium (Mg). With 10 electrons and 12 protons, the net charge is +2.`
   },
   {
-    id: "3",
-    question: "Which subatomic particles reside in the atomic nucleus?",
-    options: ["Protons and electrons", "Electrons and neutrons", "Protons and neutrons", "Neutrons only"],
-    correctAnswer: "Protons and neutrons",
-    explanation: "The nucleus contains the bulk of the atom's mass, consisting of protons and neutrons. Electrons occupy the cloud surrounding the nucleus." [cite: 80, 81, 82, 93]
+    id: "acs-003",
+    question: `What is the chemical formula of Hydrosulfuric Acid?`,
+    options: [`$H_{2}SO_{4(aq)}$`, `$H_{2}SO_{3(aq)}$`, `$H_{2}S_{(aq)}$`, `$H_{2}S_{2}O_{4(aq)}$`],
+    correctAnswer: `$H_{2}S_{(aq)}$`,
+    explanation: `The 'hydro-' prefix and '-ic' suffix for a binary acid indicate it is formed from the element sulfur: $H_{2}S$.`
   },
   {
-    id: "4",
-    question: "What species is represented by $p^+ = 12, n^0 = 14, e^- = 10$?",
-    options: ["Ne", "Si", "Mg", "$Mg^{2+}$"],
-    correctAnswer: "$Mg^{2+}$",
-    explanation: "12 protons define Magnesium. 10 electrons (2 fewer than protons) indicate a $+2$ charge." [cite: 60, 61, 62, 63, 66]
+    id: "acs-004",
+    question: `Which pair of elements would you expect to exhibit the greatest similarity in their physical and chemical properties?`,
+    options: [`O, S`, `C, N`, `K, Ca`, `H, He`],
+    correctAnswer: `O, S`,
+    explanation: `Elements in the same group (vertical column) have similar properties because they have the same number of valence electrons. Oxygen and Sulfur are both in Group 16.`
   },
   {
-    id: "5",
-    question: "What is the chemical formula of Hydrosulfuric Acid?",
-    options: ["$H_2SO_{4(aq)}$", "$H_2SO_{3(aq)}$", "$H_2S_{(aq)}$", "$H_2S_2O_{4(aq)}$"],
-    correctAnswer: "$H_2S_{(aq)}$",
-    explanation: "Binary acids use the 'hydro-' prefix and '-ic' suffix. $H_2S$ in aqueous solution is hydrosulfuric acid." [cite: 67, 68, 69]
-  },
-  // --- FROM UNOFFICIAL ACS PRACTICE TEST 1A ---
-  {
-    id: "6",
-    question: "According to the Lewis definition, an acid is a species that:",
-    options: ["Donates a proton", "Accepts a pair of electrons", "Donates a pair of electrons", "Accepts a proton"],
-    correctAnswer: "Accepts a pair of electrons",
-    explanation: "Lewis acids are defined by their ability to accept an electron pair to form a coordinate covalent bond." [cite: 525, 529, 530]
+    id: "acs-005",
+    question: `According to the Lewis definition, an acid is a species that:`,
+    options: [`Donates a hydrogen ion`, `Accepts a hydrogen ion`, `Accepts a pair of electrons`, `Donates a pair of electrons`],
+    correctAnswer: `Accepts a pair of electrons`,
+    explanation: `Lewis acids are electron-pair acceptors; Lewis bases are electron-pair donors.`
   },
   {
-    id: "7",
-    question: "Which hydrated metal ion is most acidic under conditions of equal molar concentration in water?",
-    options: ["$Al^{3+}$", "$Ba^{2+}$", "$K^+$", "$Zn^{2+}$", "$Ag^+$"],
-    correctAnswer: "$Al^{3+}$",
-    explanation: "High charge density (high charge, small radius) increases the acidity of hydrated metal ions by polarizing the $O-H$ bond of water." [cite: 534, 536, 540]
+    id: "acs-006",
+    question: `Which hydrated metal ion is most acidic under conditions of equal molar concentration in water?`,
+    options: [`$Al^{3+}$`, `$Ba^{2+}$`, `$K^{+}$`, `$Zn^{2+}$`],
+    correctAnswer: `$Al^{3+}$`,
+    explanation: `Acidity of metal ions increases with higher charge and smaller ionic radius. $Al^{3+}$ has the highest charge-to-size ratio here.`
   },
   {
-    id: "8",
-    question: "Which element in Group 5A forms the most basic oxide?",
-    options: ["N", "P", "As", "Sb", "Bi"],
-    correctAnswer: "Bi",
-    explanation: "Basicity of oxides increases down a group as the metallic character of the elements increases." [cite: 541, 544, 549]
+    id: "acs-007",
+    question: `In what respect does an atom of magnesium differ from a magnesium ion ($Mg^{2+}$)?`,
+    options: [`The ion has more protons`, `The ion has a more stable electronic arrangement`, `The nuclear charge is different`, `The ion has more planetary electrons`],
+    correctAnswer: `The ion has a more stable electronic arrangement`,
+    explanation: `The $Mg^{2+}$ ion has a noble gas configuration ([Ne]), which is more stable than the atom's [Ne]$3s^2$ configuration.`
   },
   {
-    id: "9",
-    question: "In what respect does an atom of magnesium differ from a magnesium ion ($Mg^{2+}$)?",
-    options: ["The ion has a more stable electronic arrangement", "The ion has 2 more protons", "The ion has a larger radius", "The ion reacts more readily with $Cl_2$"],
-    correctAnswer: "The ion has a more stable electronic arrangement",
-    explanation: "The $Mg^{2+}$ ion has a full octet (noble gas configuration), which is significantly more stable than the $3s^2$ valence shell of the atom." [cite: 551, 552]
+    id: "acs-008",
+    question: `The atomic mass of an element is 32.07 u and its atomic number is 16. How many protons are in the nucleus?`,
+    options: [`16`, `31`, `32`, `48`],
+    correctAnswer: `16`,
+    explanation: `The atomic number (Z) is by definition the number of protons in the nucleus.`
   },
   {
-    id: "10",
-    question: "The nucleus of which atom contains seven neutrons?",
-    options: ["Atom A ($M=24, Z=12$)", "Atom B ($M=15, Z=7$)", "Atom C ($M=17, Z=10$)", "Atom D ($M=7, Z=3$)"],
-    correctAnswer: "Atom C ($M=17, Z=10$)",
-    explanation: "Neutrons = Mass Number (M) - Atomic Number (Z). For Atom C: $17 - 10 = 7$." [cite: 583, 592, 595, 618]
+    id: "acs-009",
+    question: `Which chloride should exhibit the most covalent type of bond?`,
+    options: [`NaCl`, `KCl`, `$CaCl_{2}$`, `$BeCl_{2}$`],
+    correctAnswer: `$BeCl_{2}$`,
+    explanation: `Covalent character increases as the electronegativity difference decreases. Beryllium is the least metallic/most electronegative cation here.`
+  },
+  {
+    id: "acs-010",
+    question: `Which principle restricts the occupancy of an atomic orbital to no more than two electrons?`,
+    options: [`Conservation of Energy`, `Pauli Exclusion Principle`, `Heisenberg Uncertainty Principle`, `Hund's Rule`],
+    correctAnswer: `Pauli Exclusion Principle`,
+    explanation: `The Pauli Exclusion Principle states that no two electrons in an atom can have the same four quantum numbers, limiting orbitals to two electrons with opposite spins.`
   }
-  // ... adding 490 more questions to the object ...
 ];
