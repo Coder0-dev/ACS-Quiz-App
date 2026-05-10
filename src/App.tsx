@@ -38,12 +38,12 @@ export default function App() {
       ...q,
       options: shuffleArray([...q.options])
     }));
-    setQuestions(shuffled);
+  
+    // Slice the first 20 questions from the shuffled 500+ pool
+    const sessionPool = shuffled.slice(0, 20); 
+  
+    setQuestions(sessionPool);
   }, []);
-
-  if (questions.length === 0) {
-    return <div className="flex h-screen items-center justify-center font-sans text-slate-500">Loading Chemistry Engine...</div>;
-  }
 
   const currentQ = questions[currentIdx];
   const progress = (currentIdx / questions.length) * 100;
