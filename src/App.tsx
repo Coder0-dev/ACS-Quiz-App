@@ -33,17 +33,28 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
-  useEffect(() => {
-    const shuffled = shuffleArray(rawQuestions).map(q => ({
-      ...q,
-      options: shuffleArray([...q.options])
-    }));
+ const startSession = () => {
+  // 1. Shuffle the entire pool of 500+ questions
+  const fullPoolShuffled = shuffleArray(rawQuestions);
   
-    // Slice the first 20 questions from the shuffled 500+ pool
-    const sessionPool = shuffled.slice(0, 20); 
-  
-    setQuestions(sessionPool);
-  }, []);
+  // 2. Take only the first 20 from that shuffled pool
+  const selectedBatch = fullPoolShuffled.slice(0, 20).map(q => ({
+    ...q,
+    // 3. Also shuffle the options for those 20 questions
+    options: shuffleArray([...q.options])
+  }));
+
+  setQuestions(selectedBatch);
+  setCurrentIdx(0);
+  setScore(0);
+  setSelectedAnswer(null);
+  setIsAnswered(false);
+  setIsFinished(false);
+};
+
+useEffect(() => {
+  startSession();
+}, []);
 
   const currentQ = questions[currentIdx];
   const progress = (currentIdx / questions.length) * 100;
