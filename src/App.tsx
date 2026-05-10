@@ -1,27 +1,23 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import ReactMarkdown from 'react-markdown';
-import InlineMath from '@matejmazur/react-katex'; // We'll build a small wrapper below
+import React, { useState, useEffect } from 'react';
+import InlineMath from 'react-katex'; 
 import { CheckCircle2, XCircle, ArrowRight, RotateCcw, HelpCircle } from 'lucide-react';
-import { Question } from './types';
 import { rawQuestions } from './data/questions';
 import { shuffleArray } from './utils/shuffle';
+import { Question } from './types';
 import 'katex/dist/katex.min.css';
 
-// Custom lightweight wrapper for KaTeX to handle inline strings safely
-const MathText = ({ text }: { text: string }) => {
-  // Simple regex to extract latex wrapped in $...$
+// Component to handle the parsing of $ LaTeX $ inside strings
+const MathText: React.FC<{ text: string }> = ({ text }) => {
   const parts = text.split(/(\$.*?\$)/g);
   return (
-    <span>
+    <>
       {parts.map((part, index) => {
         if (part.startsWith('$') && part.endsWith('$')) {
-          // Render as KaTeX
-          return <InlineMath key="{index}" math="{part.slice(1," -1)}/>;
+          return <InlineMath key={index} math={part.slice(1, -1)} />;
         }
-        // Render as normal text
         return <span key={index}>{part}</span>;
       })}
-    </span>
+    </>
   );
 };
 
@@ -33,13 +29,12 @@ export default function App() {
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
-  // Initialize and randomize session
   const startSession = () => {
-    const shuffledQuestions = shuffleArray(rawQuestions).map(q => ({
+    const shuffled = shuffleArray(rawQuestions).map(q => ({
       ...q,
-      options: shuffleArray(q.options) // Shuffle options for each question
+      options: shuffleArray([...q.options])
     }));
-    setQuestions(shuffledQuestions);
+    setQuestions(shuffled);
     setCurrentIdx(0);
     setScore(0);
     setSelectedAnswer(null);
@@ -51,7 +46,7 @@ export default function App() {
     startSession();
   }, []);
 
-  if (questions.length === 0) return null;
+  if (questions.length === 0) return <div className="p-10 text-center">Loading Session...</div>;
 
   const currentQ = questions[currentIdx];
   const progress = ((currentIdx) / questions.length) * 100;
@@ -60,15 +55,12 @@ export default function App() {
     if (isAnswered) return;
     setSelectedAnswer(option);
     setIsAnswered(true);
-    
-    if (option === currentQ.correctAnswer) {
-      setScore(prev => prev + 1);
-    }
+    if (option === currentQ.correctAnswer) setScore(s => s + 1);
   };
 
   const nextQuestion = () => {
     if (currentIdx + 1 < questions.length) {
-      setCurrentIdx(prev => prev + 1);
+      setCurrentIdx(i => i + 1);
       setSelectedAnswer(null);
       setIsAnswered(false);
     } else {
@@ -78,18 +70,15 @@ export default function App() {
 
   if (isFinished) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-6">
-        <div className="max-w-md w-full bg-white p-8 rounded-2xl border border-slate-200 shadow-sm text-center space-y-6">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Quiz Complete</h2>
-          <div className="text-6xl font-black text-slate-800">
+      <div className="min-h-screen flex items-center justify-center p-6 bg-slate-50 font-sans">
+        <div className="max-w-md w-full bg-white p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Quiz Complete</h2>
+          <div className="text-5xl font-black text-slate-800 mb-2">
             {Math.round((score / questions.length) * 100)}%
           </div>
-          <p className="text-slate-500">You scored {score} out of {questions.length}</p>
-          <button 
-            onClick={startSession}
-            className="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors"
-          >
-            <RotateCcw size="{18}"/> Restart Session
+          <p className="text-slate-500 mb-8">Correct: {score} / {questions.length}</p>
+          <button onClick={startSession} className="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-3 rounded-xl font-medium hover:bg-slate-800 transition-all">
+            <RotateCcw size={18} /> Restart
           </button>
         </div>
       </div>
@@ -97,40 +86,33 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center py-12 px-4 sm:px-6">
-      <div className="max-w-2xl w-full space-y-8">
-        
-        
+    <div className="min-h-screen bg-slate-50 py-12 px-4 font-sans">
+      <div className="max-w-2xl mx-auto space-y-8">
         <header className="space-y-4">
-          <div className="flex justify-between items-center text-sm font-medium text-slate-500">
+          <div className="flex justify-between text-sm font-semibold text-slate-500">
             <span>Question {currentIdx + 1} of {questions.length}</span>
             <span>Score: {score}</span>
           </div>
-          <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-slate-900 transition-all duration-500 ease-out"
-              style={{ width: `${progress}%` }}
-            />
+          <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
+            <div className="h-full bg-slate-900 transition-all duration-500" style={{ width: `${progress}%` }} />
           </div>
         </header>
 
-        
-        <main className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-8">
-          <h1 className="text-xl sm:text-2xl font-semibold text-slate-900 leading-relaxed">
-            <MathText text="{currentQ.question}"/>
-          </h1>
+        <main className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-10">
+          <div className="text-xl sm:text-2xl font-semibold text-slate-900 leading-relaxed mb-8">
+            <MathText text={currentQ.question} />
+          </div>
 
-          <div className="space-y-3">
+          <div className="grid gap-3">
             {currentQ.options.map((option, idx) => {
-              const isSelected = selectedAnswer === option;
               const isCorrect = option === currentQ.correctAnswer;
-              
-              let stateStyles = "border-slate-200 hover:border-slate-400 bg-white text-slate-700";
+              const isSelected = selectedAnswer === option;
+              let btnClass = "border-slate-200 hover:border-slate-400 text-slate-700";
               
               if (isAnswered) {
-                if (isCorrect) stateStyles = "border-emerald-500 bg-emerald-50 text-emerald-900 ring-1 ring-emerald-500";
-                else if (isSelected && !isCorrect) stateStyles = "border-rose-500 bg-rose-50 text-rose-900";
-                else stateStyles = "border-slate-100 bg-slate-50 text-slate-400 opacity-60";
+                if (isCorrect) btnClass = "border-emerald-500 bg-emerald-50 text-emerald-900 ring-1 ring-emerald-500";
+                else if (isSelected) btnClass = "border-rose-500 bg-rose-50 text-rose-900";
+                else btnClass = "border-slate-100 bg-slate-50 text-slate-300 opacity-60";
               }
 
               return (
@@ -138,39 +120,27 @@ export default function App() {
                   key={idx}
                   onClick={() => handleSelect(option)}
                   disabled={isAnswered}
-                  className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 flex items-center justify-between group ${stateStyles}`}
+                  className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${btnClass}`}
                 >
-                  <span className="text-lg">
-                    <MathText text="{option}"/>
-                  </span>
-                  {isAnswered && isCorrect && <CheckCircle2 className="text-emerald-500" size="{20}"/>}
-                  {isAnswered && isSelected && !isCorrect && <XCircle className="text-rose-500" size="{20}"/>}
+                  <span className="text-lg"><MathText text={option} /></span>
+                  {isAnswered && isCorrect && <CheckCircle2 className="text-emerald-600" size={20} />}
+                  {isAnswered && isSelected && !isCorrect && <XCircle className="text-rose-600" size={20} />}
                 </button>
               );
             })}
           </div>
 
-          
           {isAnswered && (
-            <div className="animate-in fade-in slide-in-from-top-4 duration-300">
-              <div className="p-5 rounded-xl bg-slate-50 border border-slate-100 space-y-3">
-                <div className="flex items-center gap-2 font-semibold text-slate-700">
-                  <HelpCircle size="{18}"/>
-                  <h3>Explanation</h3>
+            <div className="mt-8 pt-8 border-t border-slate-100 space-y-6">
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="flex items-center gap-2 font-bold text-slate-800 mb-2">
+                  <HelpCircle size={18} className="text-slate-400" /> Explanation
                 </div>
-                <p className="text-slate-600 leading-relaxed">
-                  <MathText text="{currentQ.explanation}"/>
-                </p>
+                <p className="text-slate-600"><MathText text={currentQ.explanation} /></p>
               </div>
-
-              <div className="mt-6 flex justify-end">
-                <button
-                  onClick={nextQuestion}
-                  className="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors"
-                >
-                  Next Question <ArrowRight size="{18}"/>
-                </button>
-              </div>
+              <button onClick={nextQuestion} className="w-full flex items-center justify-center gap-2 bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg">
+                Next Question <ArrowRight size={20} />
+              </button>
             </div>
           )}
         </main>
