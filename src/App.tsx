@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // Changed this line to use named imports
-import { InlineMath } from 'react-katex'; 
+import * as KaTeX from 'react-katex';
 import { CheckCircle2, XCircle, ArrowRight, RotateCcw, HelpCircle } from 'lucide-react';
 import { rawQuestions } from './data/questions';
 import { shuffleArray } from './utils/shuffle';
