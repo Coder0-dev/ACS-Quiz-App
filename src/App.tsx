@@ -7,7 +7,7 @@ import { shuffleArray } from './utils/shuffle';
 import { Question } from './types';
 import 'katex/dist/katex.min.css';
 
-// Bulletproof MathText component
+// Bulletproof MathText component using Namespace access
 const MathText: React.FC<{ text: string }> = ({ text }) => {
   if (!text) return null;
   const parts = text.split(/(\$.*?\$)/g);
@@ -16,7 +16,8 @@ const MathText: React.FC<{ text: string }> = ({ text }) => {
       {parts.map((part, index) => {
         if (part.startsWith('$') && part.endsWith('$')) {
           const math = part.slice(1, -1);
-          return <InlineMath key={index} math={math} />;
+          // Use the Namespace here to avoid Error #130 and TS2614
+          return <KaTeX.InlineMath key={index} math={math} />;
         }
         return <span key={index}>{part}</span>;
       })}
