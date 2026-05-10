@@ -73,7 +73,7 @@ export const rawQuestions: Question[] = [
   },
   {
     id: "acs-011",
-    question: `A certain atom has the symbol ${}^{148}_{73}Px$. What does this symbol tell you about the atom?`,
+    question: `A certain atom has the symbol \\${}^{148}_{73}Px$. What does this symbol tell you about the atom?`,
     options: [`It has 148 electrons`, `It has a valence of 4`, `It has 221 protons`, `It has 75 neutrons`],
     correctAnswer: `It has 75 neutrons`,
     explanation: `Neutrons = Mass Number (148) - Atomic Number (73) = 75.`
