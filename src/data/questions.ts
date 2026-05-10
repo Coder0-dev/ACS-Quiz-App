@@ -611,5 +611,705 @@ export const rawQuestions: Question[] = [
     correctAnswer: `Their reactions are generally slow`,
     explanation: `Ionic reactions in solution are usually extremely fast because the ions are already dissociated and ready to react[cite: 432, 433].`
   }
+  {
+    id: "acs-091",
+    question: `What is the molarity of a solution made by dissolving 25.0 g of $BaCl_2$ in enough water to make 450.0 mL of solution? (M = 208.2 g/mol)`,
+    options: [`0.267 M`, `0.534 M`, `0.120 M`, `0.0556 M`],
+    correctAnswer: `0.267 M`,
+    explanation: `Moles of $BaCl_2 = 25.0 / 208.2 = 0.120$ mol. Molarity = $0.120 \text{ mol} / 0.450 \text{ L} = 0.267$ M.`
+  },
+  {
+    id: "acs-092",
+    question: `What mass of $K_2CO_3$ (M = 138.2 g/mol) is needed to prepare 250.0 mL of a 0.150 M solution?`,
+    options: [`5.18 g`, `2.59 g`, `10.4 g`, `1.38 g`],
+    correctAnswer: `5.18 g`,
+    explanation: `Moles needed = $0.250 \text{ L} \times 0.150 \text{ M} = 0.0375$ mol. Mass = $0.0375 \text{ mol} \times 138.2 \text{ g/mol} = 5.18$ g.`
+  },
+  {
+    id: "acs-093",
+    question: `Which is a property of an endothermic reaction?`,
+    options: [`Heat is released to surroundings`, `$\Delta H$ is negative`, `The system gains heat from surroundings`, `The temperature of the surroundings increases`],
+    correctAnswer: `The system gains heat from surroundings`,
+    explanation: `In endothermic reactions, energy is absorbed from the surroundings, resulting in a positive $\Delta H$.`
+  },
+  {
+    id: "acs-094",
+    question: `What is the oxidation number of sulfur in the thiosulfate ion, $S_2O_3^{2-}$?`,
+    options: [`+2`, `+4`, `+6`, `-2`],
+    correctAnswer: `+2`,
+    explanation: `Oxygen is -2. $2(S) + 3(-2) = -2$. $2S - 6 = -2$, so $2S = 4$ and $S = +2$.`
+  },
+  {
+    id: "acs-095",
+    question: `A 3.41x10⁻⁶ g sample is known to contain $4.67 \times 10^{16}$ molecules. What is this compound?`,
+    options: [`$CH_4$`, `$CO_2$`, `$H_2O$`, `$NH_3$`],
+    correctAnswer: `$CO_2$`,
+    explanation: `Moles = $(4.67 \times 10^{16}) / (6.022 \times 10^{23}) = 7.75 \times 10^{-8}$ mol. Molar mass = $(3.41 \times 10^{-6} \text{ g}) / (7.75 \times 10^{-8} \text{ mol}) = 44.0$ g/mol. This matches $CO_2$.`
+  },
+  {
+    id: "acs-096",
+    question: `How many moles of hydrogen atoms are in six moles of $Ca(OH)_2$?`,
+    options: [`2`, `6`, `8`, `12`],
+    correctAnswer: `12`,
+    explanation: `One mole of $Ca(OH)_2$ contains 2 moles of H atoms. Therefore, 6 moles contains $6 \times 2 = 12$ moles of H atoms.`
+  },
+  {
+    id: "acs-097",
+    question: `In the compound $(NH_4)_2S_2O_3$, which element is present in the largest percent by mass?`,
+    options: [`H`, `N`, `O`, `S`],
+    correctAnswer: `S`,
+    explanation: `Molar masses in the formula: $N=28$, $H=8$, $S=64$, $O=48$. Sulfur (64 g) makes up the largest mass fraction.`
+  },
+  {
+    id: "acs-098",
+    question: `What volume (mL) of 0.125 M $H_2SO_4$ is required to neutralize 25.0 mL of 0.250 M NaOH?`,
+    options: [`12.5 mL`, `25.0 mL`, `50.0 mL`, `100 mL`],
+    correctAnswer: `25.0 mL`,
+    explanation: `The ratio is 1 $H_2SO_4 : 2 NaOH$. Moles $NaOH = 0.025 \times 0.250 = 0.00625$. Moles $H_2SO_4$ needed = $0.003125$. $V = 0.003125 / 0.125 = 0.025 \text{ L}$ or 25 mL.`
+  },
+  {
+    id: "acs-099",
+    question: `Which set of quantum numbers is not allowed?`,
+    options: [`$n=3, l=2, m_l=0$`, `$n=2, l=1, m_l=-1$`, `$n=1, l=0, m_l=0$`, `$n=2, l=2, m_l=1$`],
+    correctAnswer: `$n=2, l=2, m_l=1$`,
+    explanation: `The value of $l$ must be strictly less than $n$. If $n=2$, the maximum value for $l$ is 1.`
+  },
+  {
+    id: "acs-100",
+    question: `Which molecule has the largest dipole moment?`,
+    options: [`$CCl_4$`, `$NH_3$`, `$BF_3$`, `$CO_2$`],
+    correctAnswer: `$NH_3$`,
+    explanation: `$CCl_4$, $BF_3$, and $CO_2$ are all symmetric, meaning their bond dipoles cancel out. $NH_3$ is pyramidal and polar.`
+  },
+  {
+    id: "acs-101",
+    question: `What is the formal charge on the central phosphorus atom in $PO_4^{3-}$?`,
+    options: [`-1`, `0`, `+1`, `+5`],
+    correctAnswer: `0`,
+    explanation: `Phosphorus has 5 valence electrons. In the most stable structure (with one double bond to O), it has 5 bonds and no lone pairs. $FC = 5 - 0 - 5 = 0$.`
+  },
+  {
+    id: "acs-102",
+    question: `Which hybrid orbitals are used by carbon in $C_2H_2$ (acetylene)?`,
+    options: [`sp`, `$sp^2$`, `$sp^3$`, `$dsp^2$`],
+    correctAnswer: `sp`,
+    explanation: `Acetylene has a triple bond between carbons ($H-C\equiv C-H$). Linear geometry corresponds to sp hybridization.`
+  },
+  {
+    id: "acs-103",
+    question: `According to Kinetic Molecular Theory, gas pressure is caused by:`,
+    options: [`Attractive forces between gas particles`, `Collisions of gas particles with the container walls`, `The volume of the particles themselves`, `The repulsion between electron clouds`],
+    correctAnswer: `Collisions of gas particles with the container walls`,
+    explanation: `Pressure is defined as the force exerted by gas particles as they strike the internal surfaces of their container.`
+  },
+  {
+    id: "acs-104",
+    question: `How many sigma ($\sigma$) and pi ($\pi$) bonds are in $CH_2=CH-C\equiv N$?`,
+    options: [`6 $\sigma$, 3 $\pi$`, `4 $\sigma$, 3 $\pi$`, `7 $\sigma$, 3 $\pi$`, `5 $\sigma$, 2 $\pi$`],
+    correctAnswer: `6 $\sigma$, 3 $\pi$`,
+    explanation: `$\sigma$ bonds: 2 (C-H) + 1 (C=C) + 1 (C-H) + 1 (C-C) + 1 (C$\equiv$N) = 6. $\pi$ bonds: 1 (from C=C) + 2 (from C$\equiv$N) = 3.`
+  },
+  {
+    id: "acs-105",
+    question: `A gas sample occupies 2.0 L at 1.0 atm. If the pressure is increased to 4.0 atm at constant temperature, the volume becomes:`,
+    options: [`8.0 L`, `0.5 L`, `1.0 L`, `2.0 L`],
+    correctAnswer: `0.5 L`,
+    explanation: `Boyle's Law: $P_1V_1 = P_2V_2 \implies (1.0)(2.0) = (4.0)V_2 \implies V_2 = 0.5 \text{ L}$.`
+  },
+  {
+    id: "acs-106",
+    question: `Which gas will diffuse the fastest at a given temperature?`,
+    options: [`$CH_4$`, `$O_2$`, `$CO_2$`, `$N_2$`],
+    correctAnswer: `$CH_4$`,
+    explanation: `Graham's Law states that the rate of diffusion is inversely proportional to the square root of the molar mass. $CH_4$ (16 g/mol) is the lightest.`
+  },
+  {
+    id: "acs-107",
+    question: `What is the oxidation state of Cr in $K_2Cr_2O_7$?`,
+    options: [`+3`, `+5`, `+6`, `+7`],
+    correctAnswer: `+6`,
+    explanation: `$2(+1) + 2(Cr) + 7(-2) = 0 \implies 2 + 2Cr - 14 = 0 \implies 2Cr = 12 \implies Cr = +6$.`
+  },
+  {
+    id: "acs-108",
+    question: `The specific heat of iron is $0.45 \text{ J/g}\cdot^{\circ}C$. How much heat is required to raise 10.0 g of iron from $25^{\circ}C$ to $75^{\circ}C$?`,
+    options: [`22.5 J`, `450 J`, `225 J`, `112.5 J`],
+    correctAnswer: `225 J`,
+    explanation: `$q = mc\Delta T = (10.0 \text{ g})(0.45)(50.0) = 225$ J.`
+  },
+  {
+    id: "acs-109",
+    question: `Which element has the highest electronegativity?`,
+    options: [`N`, `O`, `F`, `Cl`],
+    correctAnswer: `F`,
+    explanation: `Fluorine is the most electronegative element on the periodic table.`
+  },
+  {
+    id: "acs-110",
+    question: `The solubility of $KNO_3$ in water ________ as temperature increases.`,
+    options: [`Increases`, `Decreases`, `Stays the same`, `Increases then decreases`],
+    correctAnswer: `Increases`,
+    explanation: `For most solid solutes, solubility increases with increasing temperature.`
+  },
+  {
+    id: "acs-111",
+    question: `A solution with a pH of 3.0 has a $[H^+]$ of:`,
+    options: [`$1.0 \times 10^{-3}$ M`, `$3.0$ M`, `$1.0 \times 10^{-11}$ M`, `$1.0 \times 10^3$ M`],
+    correctAnswer: `$1.0 \times 10^{-3}$ M`,
+    explanation: `$[H^+] = 10^{-pH} = 10^{-3.0}$.`
+  },
+  {
+    id: "acs-112",
+    question: `Which is the conjugate base of $H_2PO_4^-$?`,
+    options: [`$H_3PO_4$`, `$HPO_4^{2-}$`, `$PO_4^{3-}$`, `$OH^-$`],
+    correctAnswer: `$HPO_4^{2-}$`,
+    explanation: `A conjugate base is formed by removing one $H^+$ ion from the acid.`
+  },
+  {
+    id: "acs-113",
+    question: `Which solution will have the lowest freezing point?`,
+    options: [`0.1 M Sugar`, `0.1 M NaCl`, `0.1 M $CaCl_2$`, `0.1 M $AlCl_3$`],
+    correctAnswer: `0.1 M $AlCl_3$`,
+    explanation: `Colligative properties depend on the number of particles. $AlCl_3$ dissociates into 4 ions, the most in this set.`
+  },
+  {
+    id: "acs-114",
+    question: `What is the name for the process where a solid changes directly into a gas?`,
+    options: [`Melting`, `Vaporization`, `Sublimation`, `Deposition`],
+    correctAnswer: `Sublimation`,
+    explanation: `Sublimation is the phase transition from solid to gas without passing through the liquid phase.`
+  },
+  {
+    id: "acs-115",
+    question: `Which atom has the largest first ionization energy?`,
+    options: [`Li`, `Be`, `B`, `C`],
+    correctAnswer: `C`,
+    explanation: `Ionization energy generally increases across a period from left to right.`
+  },
+  {
+    id: "acs-116",
+    question: `Which of these is a strong electrolyte?`,
+    options: [`$CH_3COOH$`, `$NH_3$`, `$HCl$`, `$H_2O$`],
+    correctAnswer: `$HCl$`,
+    explanation: `HCl is a strong acid and dissociates completely in water.`
+  },
+  {
+    id: "acs-117",
+    question: `In the reaction $Zn + Cu^{2+} \rightarrow Zn^{2+} + Cu$, which species is the reducing agent?`,
+    options: [`$Zn$`, `$Cu^{2+}$`, `$Zn^{2+}$`, `$Cu$`],
+    correctAnswer: `$Zn$`,
+    explanation: `The reducing agent is the species that is oxidized (loses electrons). Zinc goes from 0 to +2.`
+  },
+  {
+    id: "acs-118",
+    question: `What is the electronic geometry of a molecule with 3 bonding pairs and 1 lone pair?`,
+    options: [`Trigonal planar`, `Tetrahedral`, `Trigonal pyramidal`, `Bent`],
+    correctAnswer: `Tetrahedral`,
+    explanation: `With 4 electron domains (3 bonds + 1 lone pair), the electron geometry is tetrahedral.`
+  },
+  {
+    id: "acs-119",
+    question: `The boiling point of water is higher than $H_2S$ because of:`,
+    options: [`Ionic bonding`, `Covalent bonding`, `Hydrogen bonding`, `Dispersion forces`],
+    correctAnswer: `Hydrogen bonding`,
+    explanation: `Water has H-O bonds, allowing for strong hydrogen bonding, which significantly raises its boiling point.`
+  },
+  {
+    id: "acs-120",
+    question: `Which quantum number determines the orientation of an orbital in space?`,
+    options: [`Principal ($n$)`, `Angular Momentum ($l$)`, `Magnetic ($m_l$)`, `Spin ($m_s$)`],
+    correctAnswer: `Magnetic ($m_l$)`,
+    explanation: `$m_l$ specifies the orientation of the orbital.`
+  },
+  {
+    id: "acs-121",
+    question: `What is the mass of one atom of Copper ($M = 63.55$)?`,
+    options: [`$1.05 \times 10^{-22}$ g`, `$63.55$ g`, `$1.66 \times 10^{-24}$ g`, `$3.82 \times 10^{25}$ g`],
+    correctAnswer: `$1.05 \times 10^{-22}$ g`,
+    explanation: `Mass of 1 atom = $63.55 / (6.022 \times 10^{23}) = 1.055 \times 10^{-22}$ g.`
+  },
+  {
+    id: "acs-122",
+    question: `Which property describes a metal?`,
+    options: [`Brittle`, `Low electrical conductivity`, `Malleable`, `Acidic oxides`],
+    correctAnswer: `Malleable`,
+    explanation: `Metals are typically malleable, ductile, and good conductors of heat and electricity.`
+  },
+  {
+    id: "acs-123",
+    question: `For the reaction $A + B \rightarrow C$, the rate law is $Rate = k[A]^2$. If [A] is doubled, the rate increases by:`,
+    options: [`2x`, `4x`, `8x`, `Remains the same`],
+    correctAnswer: `4x`,
+    explanation: `The reaction is second order with respect to A. $(2)^2 = 4$.`
+  },
+  {
+    id: "acs-124",
+    question: `Which is the correct formula for Aluminum Oxide?`,
+    options: [`AlO`, `$Al_2O$`, `$AlO_2$`, `$Al_2O_3$`],
+    correctAnswer: `$Al_2O_3$`,
+    explanation: `Aluminum is +3 and Oxygen is -2. To balance: $2(+3) + 3(-2) = 0$.`
+  },
+  {
+    id: "acs-125",
+    question: `A solution of pH 9 is:`,
+    options: [`Strongly acidic`, `Weakly acidic`, `Neutral`, `Basic`],
+    correctAnswer: `Basic`,
+    explanation: `Any solution with a pH greater than 7 is considered basic.`
+  },
+  {
+    id: "acs-126",
+    question: `The energy required to remove an electron from an atom is called:`,
+    options: [`Electron affinity`, `Electronegativity`, `Ionization energy`, `Lattice energy`],
+    correctAnswer: `Ionization energy`,
+    explanation: `Ionization energy is the energy required to remove an electron from a gaseous atom or ion.`
+  },
+  {
+    id: "acs-127",
+    question: `Which law states that the total pressure of a gas mixture is the sum of partial pressures?`,
+    options: [`Charles's Law`, `Boyle's Law`, `Dalton's Law`, `Avogadro's Law`],
+    correctAnswer: `Dalton's Law`,
+    explanation: `Dalton's Law of Partial Pressures states that $P_{total} = P_1 + P_2 + ... P_n$.`
+  },
+  {
+    id: "acs-128",
+    question: `Which concentration unit is temperature-independent?`,
+    options: [`Molarity`, `Molality`, `Mass per Volume`, `Normality`],
+    correctAnswer: `Molality`,
+    explanation: `Molality depends on mass of solvent, which does not change with temperature, unlike volume-based units like Molarity.`
+  },
+  {
+    id: "acs-129",
+    question: `What is the pH of a 0.01 M HCl solution?`,
+    options: [`1`, `2`, `7`, `12`],
+    correctAnswer: `2`,
+    explanation: `$pH = -\log(0.01) = 2$.`
+  },
+  {
+    id: "acs-130",
+    question: `Which element has the electron configuration $[Ar] 4s^1 3d^5$?`,
+    options: [`Mn`, `Cr`, `Fe`, `V`],
+    correctAnswer: `Cr`,
+    explanation: `Chromium is an exception to the Aufbau principle, preferring a half-filled d-shell for stability.`
+  },
+  {
+    id: "acs-131",
+    question: `What is the molecular shape of $H_2O$?`,
+    options: [`Linear`, `Bent`, `Tetrahedral`, `Trigonal planar`],
+    correctAnswer: `Bent`,
+    explanation: `Water has 2 bonding pairs and 2 lone pairs on the oxygen, resulting in a bent shape.`
+  },
+  {
+    id: "acs-132",
+    question: `The units of the rate constant ($k$) for a first-order reaction are:`,
+    options: [`$M \cdot s^{-1}$`, `$s^{-1}$`, `$M^{-1} \cdot s^{-1}$`, `$M^{-2} \cdot s^{-1}$`],
+    correctAnswer: `$s^{-1}$`,
+    explanation: `For first-order, $Rate = k[A]$, so $k = (M/s) / M = s^{-1}$.`
+  },
+  {
+    id: "acs-133",
+    question: `Which is an intensive property?`,
+    options: [`Mass`, `Volume`, `Density`, `Heat capacity`],
+    correctAnswer: `Density`,
+    explanation: `Intensive properties do not depend on the amount of matter present.`
+  },
+  {
+    id: "acs-134",
+    question: `In the reaction $N_2 + 3H_2 \rightleftharpoons 2NH_3$, increasing the volume of the container will:`,
+    options: [`Shift equilibrium to the right`, `Shift equilibrium to the left`, `Have no effect`, `Increase the rate of the forward reaction`],
+    correctAnswer: `Shift equilibrium to the left`,
+    explanation: `Increasing volume (decreasing pressure) shifts equilibrium to the side with more moles of gas.`
+  },
+  {
+    id: "acs-135",
+    question: `Which orbital is filled after the 4s orbital?`,
+    options: [`4p`, `3d`, `5s`, `4d`],
+    correctAnswer: `3d`,
+    explanation: `According to the Aufbau principle, the 3d orbitals are higher in energy than 4s but lower than 4p.`
+  },
+  {
+    id: "acs-136",
+    question: `The bond in $HCl$ is:`,
+    options: [`Ionic`, `Nonpolar covalent`, `Polar covalent`, `Metallic`],
+    correctAnswer: `Polar covalent`,
+    explanation: `There is a significant difference in electronegativity between H and Cl, but they share electrons.`
+  },
+  {
+    id: "acs-137",
+    question: `What is the standard state for Carbon?`,
+    options: [`Diamond`, `Graphite`, `$C_{60}$`, `Amorphous carbon`],
+    correctAnswer: `Graphite`,
+    explanation: `Graphite is the most stable form of carbon at 1 atm and 298 K.`
+  },
+  {
+    id: "acs-138",
+    question: `A catalyst works by:`,
+    options: [`Raising the temperature`, `Increasing reactant concentration`, `Providing an alternative pathway with lower $E_a$`, `Increasing the collision frequency`],
+    correctAnswer: `Providing an alternative pathway with lower $E_a$`,
+    explanation: `Catalysts lower the activation energy required for a reaction to occur.`
+  },
+  {
+    id: "acs-139",
+    question: `Which is the strongest acid?`,
+    options: [`$HF$`, `$HCl$`, `$HBr$`, `$HI$`],
+    correctAnswer: `$HI$`,
+    explanation: `Acid strength for hydrohalic acids increases down the group as bond strength decreases.`
+  },
+  {
+    id: "acs-140",
+    question: `What is the empirical formula of a compound with 40% C, 6.7% H, and 53.3% O?`,
+    options: [`$CH_2O$`, `$C_2H_4O_2$`, `$CHO$`, `$C_2H_2O$`],
+    correctAnswer: `$CH_2O$`,
+    explanation: `Moles: $C=3.33, H=6.66, O=3.33$. Ratio is 1:2:1.`
+  },
+  {
+    id: "acs-141",
+    question: `The freezing point of a 1.0 m aqueous solution of a non-electrolyte is: ($K_f = 1.86^{\circ}C/m$)`,
+    options: [`$1.86^{\circ}C$`, `$-1.86^{\circ}C$`, `$0.0^{\circ}C$`, `$-3.72^{\circ}C$`],
+    correctAnswer: `$-1.86^{\circ}C$`,
+    explanation: `$\Delta T_f = K_f \cdot m \cdot i$. Here $1.86 \cdot 1.0 \cdot 1 = 1.86$. Freezing point is $0 - 1.86 = -1.86^{\circ}C$.`
+  },
+  {
+    id: "acs-142",
+    question: `Which noble gas has the highest boiling point?`,
+    options: [`He`, `Ne`, `Ar`, `Xe`],
+    correctAnswer: `Xe`,
+    explanation: `Boiling points of noble gases increase with size/mass due to stronger London dispersion forces.`
+  },
+  {
+    id: "acs-143",
+    question: `Which of these is a buffer?`,
+    options: [`$HCl / NaCl$`, `$NaOH / NaCl$`, `$NH_3 / NH_4Cl$`, `$HNO_3 / NaNO_3$`],
+    correctAnswer: `$NH_3 / NH_4Cl$`,
+    explanation: `A buffer consists of a weak acid and its conjugate base, or a weak base and its conjugate acid.`
+  },
+  {
+    id: "acs-144",
+    question: `The half-life of a first-order reaction is:`,
+    options: [`$\ln(2)/k$`, `$1/k[A]_0$`, `$0.693/k$`, `Both A and C`],
+    correctAnswer: `Both A and C`,
+    explanation: `$t_{1/2} = \ln(2)/k \approx 0.693/k$.`
+  },
+  {
+    id: "acs-145",
+    question: `Which is the correct Lewis structure for $CO_2$?`,
+    options: [`$O-C-O$`, `$O=C=O$`, `$O\equiv C-O$`, `$C=O=O$`],
+    correctAnswer: `$O=C=O$`,
+    explanation: `Carbon forms two double bonds with Oxygen to satisfy the octet rule for all atoms.`
+  },
+  {
+    id: "acs-146",
+    question: `An amphoteric substance is one that:`,
+    options: [`Acts as both an acid and a base`, `Conducts electricity`, `Does not dissolve in water`, `Contains both ionic and covalent bonds`],
+    correctAnswer: `Acts as both an acid and a base`,
+    explanation: `Water is a classic example of an amphoteric substance.`
+  },
+  {
+    id: "acs-147",
+    question: `What is the volume of 1.0 mol of an ideal gas at 273 K and 2.0 atm?`,
+    options: [`22.4 L`, `11.2 L`, `44.8 L`, `5.6 L`],
+    correctAnswer: `11.2 L`,
+    explanation: `$V = nRT/P = (1.0 \cdot 0.0821 \cdot 273) / 2 = 11.2$ L.`
+  },
+  {
+    id: "acs-148",
+    question: `Which transition metal is most likely to form a +1 ion?`,
+    options: [`Fe`, `Cu`, `Zn`, `Sc`],
+    correctAnswer: `Cu`,
+    explanation: `Copper(I) is common because losing one electron from $4s^1 3d^{10}$ leaves a stable full d-shell.`
+  },
+  {
+    id: "acs-149",
+    question: `The Arrhenius equation relates $k$ to:`,
+    options: [`Temperature and Activation Energy`, `Pressure and Volume`, `Entropy and Enthalpy`, `Concentration and Time`],
+    correctAnswer: `Temperature and Activation Energy`,
+    explanation: `$k = A e^{-E_a/RT}$.`
+  },
+  {
+    id: "acs-150",
+    question: `What is the pH of a solution with $[OH^-] = 1.0 \times 10^{-4}$ M?`,
+    options: [`4`, `10`, `7`, `14`],
+    correctAnswer: `10`,
+    explanation: `$pOH = -\log(10^{-4}) = 4$. $pH = 14 - 4 = 10$.`
+  },
+  {
+    id: "acs-151",
+    question: `Which bond is the strongest?`,
+    options: [`$C-C$`, `$C=C$`, `$C\equiv C$`, `All are equal`],
+    correctAnswer: `$C\equiv C$`,
+    explanation: `Triple bonds are stronger and shorter than double or single bonds.`
+  },
+  {
+    id: "acs-152",
+    question: `The oxidation state of Oxygen in peroxides is:`,
+    options: [`-2`, `-1`, `0`, `+2`],
+    correctAnswer: `-1`,
+    explanation: `In peroxides like $H_2O_2$, Oxygen has an oxidation state of -1.`
+  },
+  {
+    id: "acs-153",
+    question: `Which is a covalent network solid?`,
+    options: [`Ice`, `Salt`, `Diamond`, `Iron`],
+    correctAnswer: `Diamond`,
+    explanation: `Diamond is held together by an extensive network of covalent bonds.`
+  },
+  {
+    id: "acs-154",
+    question: `For the reaction $H_2 + Cl_2 \rightarrow 2HCl$, $\Delta H = -184$ kJ. The reaction is:`,
+    options: [`Endothermic`, `Exothermic`, `At equilibrium`, `Isothermal`],
+    correctAnswer: `Exothermic`,
+    explanation: `A negative enthalpy change indicates heat is released.`
+  },
+  {
+    id: "acs-155",
+    question: `What is the mass of 0.5 moles of $H_2O$?`,
+    options: [`9 g`, `18 g`, `36 g`, `1 g`],
+    correctAnswer: `9 g`,
+    explanation: `$0.5 \text{ mol} \times 18 \text{ g/mol} = 9$ g.`
+  },
+  {
+    id: "acs-156",
+    question: `Which gas law relates volume and temperature?`,
+    options: [`Boyle's Law`, `Charles's Law`, `Gay-Lussac's Law`, `Dalton's Law`],
+    correctAnswer: `Charles's Law`,
+    explanation: `Charles's Law states $V/T = \text{constant}$ at constant pressure.`
+  },
+  {
+    id: "acs-157",
+    question: `Which subshell has the highest energy in the n=3 shell?`,
+    options: [`3s`, `3p`, `3d`, `3f`],
+    correctAnswer: `3d`,
+    explanation: `The 3f subshell does not exist. Among 3s, 3p, and 3d, 3d is the highest in energy.`
+  },
+  {
+    id: "acs-158",
+    question: `A solution with a pH of 7 is:`,
+    options: [`Acidic`, `Basic`, `Neutral`, `Amphoteric`],
+    correctAnswer: `Neutral`,
+    explanation: `At $25^{\circ}C$, pH 7 is the neutral point.`
+  },
+  {
+    id: "acs-159",
+    question: `Which element is a halogen?`,
+    options: [`He`, `Li`, `Cl`, `O`],
+    correctAnswer: `Cl`,
+    explanation: `Chlorine is in Group 17, the halogens.`
+  },
+  {
+    id: "acs-160",
+    question: `The "like dissolves like" rule refers to:`,
+    options: [`Mass`, `Molar mass`, `Polarity`, `Color`],
+    correctAnswer: `Polarity`,
+    explanation: `Polar solvents dissolve polar solutes; nonpolar solvents dissolve nonpolar solutes.`
+  },
+  {
+    id: "acs-161",
+    question: `What is the formula of Calcium Nitrate?`,
+    options: [`$CaNO_3$`, `$Ca(NO_3)_2$`, `$Ca_2NO_3$`, `$Ca(NO_2)_2$`],
+    correctAnswer: `$Ca(NO_3)_2$`,
+    explanation: `$Ca^{2+}$ and $NO_3^-$ combine in a 1:2 ratio.`
+  },
+  {
+    id: "acs-162",
+    question: `Which is the least electronegative element?`,
+    options: [`F`, `O`, `Cs`, `He`],
+    correctAnswer: `Cs`,
+    explanation: `Electronegativity decreases down a group and increases across a period. Cesium is near the bottom-left.`
+  },
+  {
+    id: "acs-163",
+    question: `The triple point on a phase diagram is:`,
+    options: [`Where solid and liquid coexist`, `Where all three phases coexist`, `The highest temperature liquid can exist`, `Where gas becomes plasma`],
+    correctAnswer: `Where all three phases coexist`,
+    explanation: `The triple point represents the unique temperature and pressure where solid, liquid, and gas are all in equilibrium.`
+  },
+  {
+    id: "acs-164",
+    question: `What is the hybridization of the central atom in $CH_4$?`,
+    options: [`sp`, `$sp^2$`, `$sp^3$`, `$sp^3d$`],
+    correctAnswer: `$sp^3$`,
+    explanation: `Carbon in methane has 4 bonding domains and 0 lone pairs.`
+  },
+  {
+    id: "acs-165",
+    question: `The oxidation state of an uncombined element is:`,
+    options: [`+1`, `-1`, `0`, `Variable`],
+    correctAnswer: `0`,
+    explanation: `Elements in their standard state have an oxidation number of 0.`
+  },
+  {
+    id: "acs-166",
+    question: `Which has the smallest atomic radius?`,
+    options: [`Na`, `Mg`, `Al`, `Si`],
+    correctAnswer: `Si`,
+    explanation: `Atomic radius decreases from left to right across a period.`
+  },
+  {
+    id: "acs-167",
+    question: `What is the molar mass of $CO_2$?`,
+    options: [`28`, `32`, `44`, `12`],
+    correctAnswer: `44`,
+    explanation: `$12 + 2(16) = 44$ g/mol.`
+  },
+  {
+    id: "acs-168",
+    question: `A catalyst:`,
+    options: [`Is consumed in the reaction`, `Changes the $\Delta H$`, `Increases the rate of reaction`, `Shifts the equilibrium`],
+    correctAnswer: `Increases the rate of reaction`,
+    explanation: `Catalysts are not consumed and do not change thermodynamics ($\Delta H$ or $K_{eq}$); they only affect kinetics.`
+  },
+  {
+    id: "acs-169",
+    question: `The bond angle in a perfectly tetrahedral molecule is:`,
+    options: [`$90^{\circ}$`, `$120^{\circ}$`, `$109.5^{\circ}$`, `$180^{\circ}$`],
+    correctAnswer: `$109.5^{\circ}$`,
+    explanation: `Tetrahedral geometry (e.g., $CH_4$) has bond angles of $109.5^{\circ}$.`
+  },
+  {
+    id: "acs-170",
+    question: `The process of losing electrons is called:`,
+    options: [`Reduction`, `Oxidation`, `Ionization`, `Sublimation`],
+    correctAnswer: `Oxidation`,
+    explanation: `OIL RIG: Oxidation Is Loss, Reduction Is Gain (of electrons).`
+  },
+  {
+    id: "acs-171",
+    question: `What is the charge on an alpha particle?`,
+    options: [`-1`, `0`, `+1`, `+2`],
+    correctAnswer: `+2`,
+    explanation: `An alpha particle is a helium nucleus ($He^{2+}$).`
+  },
+  {
+    id: "acs-172",
+    question: `Which element is found in all organic compounds?`,
+    options: [`Oxygen`, `Nitrogen`, `Carbon`, `Sulfur`],
+    correctAnswer: `Carbon`,
+    explanation: `Organic chemistry is the study of carbon-containing compounds.`
+  },
+  {
+    id: "acs-173",
+    question: `The density of water is approximately:`,
+    options: [`$1.0 \text{ g/mL}$`, `$1.0 \text{ kg/mL}$`, `$0.5 \text{ g/mL}$`, `$10.0 \text{ g/mL}$`],
+    correctAnswer: `$1.0 \text{ g/mL}$`,
+    explanation: `At $4^{\circ}C$, the density of water is defined as $1.00$ g/mL.`
+  },
+  {
+    id: "acs-174",
+    question: `Which ion is responsible for acidity?`,
+    options: [`$OH^-$`, `$Cl^-$`, `$H^+$`, `$Na^+$`],
+    correctAnswer: `$H^+$`,
+    explanation: `According to Arrhenius, acids produce $H^+$ ions in solution.`
+  },
+  {
+    id: "acs-175",
+    question: `What is the chemical formula for methane?`,
+    options: [`$CH_4$`, `$C_2H_6$`, `$CH_3OH$`, `$CO_2$`],
+    correctAnswer: `$CH_4$`,
+    explanation: `Methane is the simplest alkane.`
+  },
+  {
+    id: "acs-176",
+    question: `The symbol for silver is:`,
+    options: [`Si`, `Ag`, `Au`, `S`],
+    correctAnswer: `Ag`,
+    explanation: `Ag comes from the Latin 'argentum'.`
+  },
+  {
+    id: "acs-177",
+    question: `The main component of air is:`,
+    options: [`Oxygen`, `Carbon Dioxide`, `Nitrogen`, `Argon`],
+    correctAnswer: `Nitrogen`,
+    explanation: `Air is approximately 78% Nitrogen.`
+  },
+  {
+    id: "acs-178",
+    question: `Which state of matter has a definite volume but no definite shape?`,
+    options: [`Solid`, `Liquid`, `Gas`, `Plasma`],
+    correctAnswer: `Liquid`,
+    explanation: `Liquids take the shape of their container but maintain a constant volume.`
+  },
+  {
+    id: "acs-179",
+    question: `A reaction that releases heat is:`,
+    options: [`Endothermic`, `Exothermic`, `Adiabatic`, `Isentropic`],
+    correctAnswer: `Exothermic`,
+    explanation: `Exo- means out; heat goes out.`
+  },
+  {
+    id: "acs-180",
+    question: `The horizontal rows on the periodic table are called:`,
+    options: [`Groups`, `Periods`, `Families`, `Columns`],
+    correctAnswer: `Periods`,
+    explanation: `Periods are horizontal; Groups are vertical.`
+  },
+  {
+    id: "acs-181",
+    question: `Which subatomic particle has a negative charge?`,
+    options: [`Proton`, `Neutron`, `Electron`, `Positron`],
+    correctAnswer: `Electron`,
+    explanation: `Electrons carry a -1 elementary charge.`
+  },
+  {
+    id: "acs-182",
+    question: `What is the pH of pure water?`,
+    options: [`0`, `1`, `7`, `14`],
+    correctAnswer: `7`,
+    explanation: `Pure water is neutral.`
+  },
+  {
+    id: "acs-183",
+    question: `The mass number of an atom is the sum of:`,
+    options: [`Protons and Electrons`, `Protons and Neutrons`, `Neutrons and Electrons`, `Protons, Neutrons, and Electrons`],
+    correctAnswer: `Protons and Neutrons`,
+    explanation: `Electrons have negligible mass compared to nucleons.`
+  },
+  {
+    id: "acs-184",
+    question: `Which is a physical change?`,
+    options: [`Burning wood`, `Rusting iron`, `Melting ice`, `Cooking an egg`],
+    correctAnswer: `Melting ice`,
+    explanation: `Phase changes are physical changes; the chemical identity ($H_2O$) remains the same.`
+  },
+  {
+    id: "acs-185",
+    question: `The vertical columns on the periodic table are called:`,
+    options: [`Groups`, `Periods`, `Rows`, `Series`],
+    correctAnswer: `Groups`,
+    explanation: `Groups contain elements with similar chemical properties.`
+  },
+  {
+    id: "acs-186",
+    question: `Which element is a noble gas?`,
+    options: [`H`, `O`, `Ne`, `F`],
+    correctAnswer: `Ne`,
+    explanation: `Neon is in Group 18.`
+  },
+  {
+    id: "acs-187",
+    question: `What is the most abundant element in the universe?`,
+    options: [`Helium`, `Oxygen`, `Carbon`, `Hydrogen`],
+    correctAnswer: `Hydrogen`,
+    explanation: `Hydrogen makes up about 75% of all baryonic mass in the universe.`
+  },
+  {
+    id: "acs-188",
+    question: `The temperature at which a liquid turns to a solid is its:`,
+    options: [`Boiling point`, `Melting point`, `Freezing point`, `Condensation point`],
+    correctAnswer: `Freezing point`,
+    explanation: `Melting and freezing occur at the same temperature for a pure substance.`
+  },
+  {
+    id: "acs-189",
+    question: `What is the unit of energy?`,
+    options: [`Watt`, `Joule`, `Pascal`, `Newton`],
+    correctAnswer: `Joule`,
+    explanation: `The Joule (J) is the SI unit of work and energy.`
+  },
+  {
+    id: "acs-190",
+    question: `Which is an example of a mixture?`,
+    options: [`Water`, `Salt`, `Air`, `Oxygen`],
+    correctAnswer: `Air`,
+    explanation: `Air is a homogeneous mixture of various gases ($N_2, O_2, Ar,$ etc.).`
+  }
 ];
 
