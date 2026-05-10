@@ -9,6 +9,6 @@ declare module 'react-katex' {
         settings?: any;
     }
 
-    export default class InlineMath extends React.Component<KaTeXProps> {}
+    export class InlineMath extends React.Component<KaTeXProps> {}
     export class BlockMath extends React.Component<KaTeXProps> {}
 }
